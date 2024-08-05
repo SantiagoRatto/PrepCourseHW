@@ -1,0 +1,62 @@
+/* reset.css */
+
+/* Eliminamos márgenes y rellenos por defecto */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Establecemos un estilo básico para el cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Restablecemos estilos para encabezados */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+
+/* Listas */
+ul, ol {
+    list-style: none;
+}
+
+/* Enlaces */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Imágenes */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Tablas */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+/* Botones */
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Campos de formulario */
+input, textarea, select {
+    font-family: inherit;
+    font-size: inherit;
+    margin: 0;
+}
+
+/* Estilo para elementos de bloque */
+blockquote {
+    margin: 0;
+    padding: 0;
+}

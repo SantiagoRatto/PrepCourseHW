@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     <title>Mi página web</title>
     <link rel="stylesheet" type="text/css" href="./estilos.css"/>
+    <link rel="stylesheet" href="text/css" href="./reset.css">
 </head>
 <body class="fondo">
     <header>
+        <div id="titulos">
         <h1 class="title" id="Principal">Mi pagina personal</h1>
         <h2 class="title">Santiago Ratto</h2>
+        </div>
     </header>
     <main>
         <article>
@@ -19,17 +22,19 @@
         </article>
 
         <article>
-            <div>
+            <div id="tarjetas-container">
+            <div class="tarjetas">
                 <h4 class="title">HTML</h4>
-                <img src=".img/html.png" alt="Logo HTML" class="logo">
+                <img src=".img/html.png" alt="Logo generico" class="logo">
             </div>
-            <div>
+            <div class="tarjetas">
                 <h4 class="title">CSS</h4>
-                <img src=".img/css.png" alt="Logo de CSS" class="logo">
+                <img src=".img/css.png" alt="Logo generico" class="logo">
             </div>
-            <div>
+            <div class="tarjetas">
                 <h4 class="title">Javascript</h4>
-                <img src=".img/js.png" alt="Logo de Javascript" class="logo">
+                <img src=".img/js.png" alt="Logo generico" class="logo">
+            </div>
             </div>
         </article>
     </main>
