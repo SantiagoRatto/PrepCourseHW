@@ -1,0 +1,3 @@
+🤖[PROMPT]: estos no son los únicos selectores existentes en CSS. De hecho, ¡existen muchos más! A continuación te compartimos un prompt que puedes introducir en ChatGPT para que descubras a todos y puedas entenderlos en profundidad.
+
+"Actúa como un programador especialista en diseño web. Dame un listado de tipo bullet con absolutamente todos los selectores que existen dentro de CSS. Dame una breve definición de cada uno, pero que no exceda más de dos oraciones. Además, luego de responderme yo te podré nombrar cualquiera de los selectores y tu deberás darme una explicación de este más detallado, junto con un ejemplo en código CSS."

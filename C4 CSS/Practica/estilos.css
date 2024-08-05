@@ -1,0 +1,14 @@
+body{
+    background-color: aquamarine;
+}
+.title{
+    background-color: aqua;
+    font-size: 100%;
+    color: chocolate;
+}
+#Principal{
+    font-size: 200%;
+}
+.logo{
+    width: 200px;
+}
