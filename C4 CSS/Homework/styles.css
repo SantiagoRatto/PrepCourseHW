@@ -6,28 +6,50 @@ body {
   }
 
 #banner{
-
+    width: 85vw;
+    height: 2em;
+    margin: auto;
+    border: 0.2em solid lightgray;
 }
 #barra-menu{
+    width: 90vw;
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: space-between  ;
+    margin: 1em;
+    border: 0.2em solid lightgray;
+    border-radius: 2%;
+    padding: 0.2em;
 
 }
 .item-menu{
-
+    transition: 1s;
+    background-color: lightgoldenrodyellow;
+}
+.item-menu:hover{
+    background-color: coral;
+}
+.titulo-seccion{
+    background-color: coral;
 }
 .seccion-tematica{
-
+    
 }
 .articulo-periodistico{
 
 }
 .cuerpo-noticia{
-
+    border-style: dashed;
+    padding: 0.2em;
+    border: 0.2em solid lightgray;
+    display: flex;
+    background-color: rgb(238, 163, 163);
 }
 #footer{
 
 }
 #Sponsors{
-
+    
 }
 .Sponsors{
     
