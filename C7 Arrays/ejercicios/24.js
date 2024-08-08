@@ -5,6 +5,15 @@ function continueStatement(num) {
   // se continúa con la siguiente iteración.
   // PISTA: Utiliza el statement 'continue'.
   // Tu código:
+  var aumentado = [];
+  var c = 0;
+  aumentado[0] = num + 2;
+  for (var i = 0; i < 9; i++){
+    if (i == 4) continue;
+    aumentado[c + 1] = aumentado[c] + 2;
+    c++;
+  }
+  return (aumentado);
 }
 
 module.exports = continueStatement;
