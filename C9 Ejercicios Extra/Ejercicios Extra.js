@@ -6,14 +6,36 @@ function deObjetoAarray(objeto) {
   // Estos elementos debe ser cada par clave:valor del objeto recibido.
   // [EJEMPLO]: {D: 1, B: 2, C: 3} ---> [['D', 1], ['B', 2], ['C', 3]].
   // Tu código:
+  var arreglo = [];
+  var i = 0;
+  for (let prop in objeto){
+    arreglo[i] = [prop, objeto[prop]];
+    i++;
+  }
+  return arreglo;
 }
-
 function numberOfCharacters(string) {
   // La función recibe un string. Debes recorrerlo y retornar un objeto donde cada propiedad es una de las
   // letras del string, y su valor es la cantidad de veces que se repite en el string.
   // Las letras deben estar en orden alfabético.
   // [EJEMPLO]: "adsjfdsfsfjsdjfhacabcsbajda" ---> { a: 5, b: 2, c: 2, d: 4, f: 4, h:1, j: 4, s: 5 }
   // Tu código:
+  const objeto = {};
+  var array = [];
+  var c = 1;
+  for (var i = 0; i < string.length; i++){
+    array[i] = string[i];
+  }
+  array = array.toSorted();
+  for (var i = 0; i < string.length; i++){
+      if (array[i] == array[i+1]){
+        c++;
+      } else {
+        objeto[array[i]] = c;
+        c = 1;
+    }
+  }
+  return objeto;
 }
 
 function capToFront(string) {
@@ -22,25 +44,72 @@ function capToFront(string) {
   // Retornar el string.
   // [EJEMPLO]: soyHENRY ---> HENRYsoy
   // Tu código:
+  var array = [];
+  var mayusculas = [];
+  var minusculas = [];
+  for (var i = 0; i < string.length; i++){
+    array[i] = string[i];
+  }
+  mayusculas = array.filter((el) => el.charCodeAt() < 91);
+  minusculas = array.filter((el) => el.charCodeAt() > 96);
+  return (mayusculas.join("") + minusculas.join(""));
+
 }
+
 
 function asAmirror(frase) {
   // Recibes una frase. Tu tarea es retornar un nuevo string en el que el orden de las palabras sea el mismo.
   // La diferencia es que cada palabra estará escrita al inverso.
   // [EJEMPLO]: "The Henry Challenge is close!"  ---> "ehT yrneH egnellahC si !esolc"
   // Tu código:
+const palabras = frase.split(' ');
+    
+const palabrasInvertidas = palabras.map(palabra => {
+    return palabra.split('').reverse().join('');
+});
+
+return palabrasInvertidas.join(' ');
+  
 }
 
 function capicua(numero) {
   // Si el número que recibes es capicúa debes retornar el string: "Es capicua".
   // Caso contrario: "No es capicua".
   // Tu código:
+  string = numero.toString();
+  var cuenta = string.length;
+  var invertido = [];
+  var separado = [];
+
+  for (var i = 0; i < cuenta; i++){
+    separado.push(string[i]);
+  }
+  invertido = separado.toReversed();
+  invertido = invertido.join("");
+  if (string == invertido){
+    return ("Es capicua");
+  } else {
+    return ("No es capicua");
+  }
 }
 
 function deleteAbc(string) {
   // Tu tarea es eliminar las letras "a", "b" y "c" del string recibido.
   // Retorna el string sin estas letras.
   // Tu código:
+  var separado = [];
+  var final = [];
+
+  for (var i = 0; i < string.length; i++){
+    separado.push(string[i]);
+  }
+  for (var i = 0; i < string.length; i++){
+      if (separado[i] !== "a" && separado[i] !== "b" && separado[i] !== "c"){
+          final.push(separado[i]);
+      }
+  }
+
+return (final.join(""));
 }
 
 function sortArray(arrayOfStrings) {
@@ -49,6 +118,24 @@ function sortArray(arrayOfStrings) {
   // de la longitud de cada string.
   // [EJEMPLO]: ["You", "are", "beautiful", "looking"]  ---> [“You", "are", "looking", "beautiful"]
   // Tu código:
+  var cuenta = arrayOfStrings.length;
+  var v = 0;
+  var ordenado = [];
+  for (var i = 0; i < cuenta; i++){
+    for (var o = 0; o < cuenta; o++){
+      if (arrayOfStrings[i].length <= arrayOfStrings[o].length){
+        v++;
+      }
+    }
+    if (ordenado[cuenta - v] == undefined){
+        ordenado[cuenta - v] = arrayOfStrings[i];
+
+    } else {
+        ordenado[cuenta - v + 1] = arrayOfStrings[i];
+    }
+    v = 0;
+  }
+  return (ordenado);
 }
 
 function buscoInterseccion(array1, array2) {
@@ -58,6 +145,18 @@ function buscoInterseccion(array1, array2) {
   // Si no tienen elementos en común, retornar un arreglo vacío.
   // [PISTA]: los arreglos no necesariamente tienen la misma longitud.
   // Tu código:
+  var nuevo = [];
+  var indice = 0;
+  for (var i = 0; i < array1.length; i++){
+    for (var s = 0; s < array2.length; s++){
+      if (array1[i] == array2[s]){
+        nuevo[indice] = array1[i];
+        indice++;
+        s = array2.length;
+      }
+    }
+  }
+  return (nuevo);
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
