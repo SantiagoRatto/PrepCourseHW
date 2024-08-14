@@ -127,12 +127,9 @@ function sortArray(arrayOfStrings) {
         v++;
       }
     }
-    if (ordenado[cuenta - v] == undefined){
-        ordenado[cuenta - v] = arrayOfStrings[i];
-
-    } else {
-        ordenado[cuenta - v + 1] = arrayOfStrings[i];
+    for (var posicion = cuenta - v; ordenado[posicion] != undefined; posicion++){
     }
+    ordenado[posicion] = arrayOfStrings[i];
     v = 0;
   }
   return (ordenado);
